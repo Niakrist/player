@@ -1,0 +1,22 @@
+.searchWrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.searchIcon {
+  opacity: 0.5;
+  transition: opacity 0.25s;
+}
+
+.searchWrapper:hover .searchIcon {
+  opacity: 1;
+}
+
+.searchInput {
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+}
