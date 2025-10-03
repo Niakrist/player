@@ -1,15 +1,20 @@
+import { House, Puzzle, RadioTower } from "lucide-react";
 import { PagesConfig } from "../config";
+import type { IMenuItem } from "../types/menu.type";
 
-export const MENU_ITEMS = [
+export const MENU_ITEMS: IMenuItem[] = [
   {
+    icon: House,
     name: "Home",
     link: PagesConfig.HOME,
   },
   {
+    icon: Puzzle,
     name: "Discover",
     link: PagesConfig.DISCOVER,
   },
   {
+    icon: RadioTower,
     name: "Radio",
     link: PagesConfig.RADIO,
   },
