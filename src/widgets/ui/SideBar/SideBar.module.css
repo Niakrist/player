@@ -1,0 +1,12 @@
+.aside {
+  padding: 24px;
+  border-right: 1px solid var(--color-bg-player);
+  height: 100%;
+}
+
+.line {
+  margin: 32px 0;
+  height: 1px;
+  background-color: var(--color-bg-player);
+  border: none;
+}
