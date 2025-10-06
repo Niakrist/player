@@ -1,2 +1,3 @@
 import Lyrics from "./Lyrics/Lyrics";
-export { Lyrics };
+import ProgressBar from "./ProgressBar/ProgressBar";
+export { Lyrics, ProgressBar };

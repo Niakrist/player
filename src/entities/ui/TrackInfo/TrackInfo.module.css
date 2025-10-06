@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.images {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+}
+
+.trackName {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}

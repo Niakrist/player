@@ -12,7 +12,7 @@ const Menu = ({ items, title }: IMenuProps) => {
       {title && <div className={styles.title}>{title}</div>}
       <ul>
         {items.map((item) => (
-          <li>
+          <li key={item.name}>
             <a href="" className={styles.link}>
               {item?.icon && <item.icon />}
               <span>{item.name}</span>
