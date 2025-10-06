@@ -1,3 +1,8 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 body {
   padding: 0;
   margin: 0;
@@ -19,9 +24,10 @@ h4,
 h5,
 h6,
 p {
-  font-size: 16px;
   padding: 0;
   margin: 0;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 ol,
@@ -32,5 +38,9 @@ ul {
 }
 
 button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: block;
   cursor: pointer;
 }

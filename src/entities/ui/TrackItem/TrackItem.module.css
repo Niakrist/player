@@ -1,0 +1,56 @@
+.track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--color-bg-player);
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.images {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+}
+
+.trackName {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.trackВuration {
+  opacity: 0.7;
+}
+
+.iconHeart {
+  color: var(--color-primary);
+  fill: transparent;
+  transition: fill 0.2s;
+}
+
+.iconHeart:hover {
+  fill: var(--color-primary);
+}
+
+.iconEllipsis {
+  color: #fff;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+.iconEllipsis:hover {
+  opacity: 1;
+}
+
+.buttonWrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
