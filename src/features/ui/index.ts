@@ -1,2 +1,3 @@
 import SearchField from "./SearchField/SearchField";
-export { SearchField };
+import AudioPlayer from "./AudioPlayer/AudioPlayer";
+export { SearchField, AudioPlayer };

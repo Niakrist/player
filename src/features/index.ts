@@ -1,1 +1,1 @@
-export { SearchField } from "./ui";
+export { SearchField, AudioPlayer } from "./ui";

@@ -1,1 +1,1 @@
-export { Menu, TrackItem } from "./ui";
+export { Menu, TrackItem, TrackInfo } from "./ui";

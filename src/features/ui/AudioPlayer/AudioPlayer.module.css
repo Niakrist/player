@@ -1,0 +1,70 @@
+.audioPlayer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  padding: 20px 40px;
+  background-color: var(--color-bg-player);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.controllWrapper {
+  display: grid;
+  grid-template-columns: auto 1fr 300px;
+  align-items: center;
+  gap: 32px;
+}
+
+.wrapperButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.buttonPlay {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(
+    90deg,
+    rgba(60, 61, 65, 1) 0%,
+    rgba(68, 69, 73, 1) 100%
+  );
+}
+
+.iconControl {
+  color: #fff;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.iconControl:hover {
+  opacity: 1;
+}
+
+.play {
+  fill: var(--color-primary);
+  color: var(--color-primary);
+  transition: color 0.25s, fill 0.25s;
+}
+
+.buttonPlay:hover .play {
+  fill: var(--color-secondary);
+  color: var(--color-secondary);
+}
+
+.wrapperButtoVolume {
+  padding-left: 32px;
+  gap: 16px;
+  display: grid;
+  justify-self: self-start;
+  grid-template-columns: auto 100px;
+}
