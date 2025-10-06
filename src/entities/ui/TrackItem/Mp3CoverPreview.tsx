@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const readCover = (file: File) => {
   return new Promise<string | null>((resolve) => {
-    new jsmediatags.Render(file).setTagsToRead(["picture"]).read({
+    new jsmediatags.Reader(file).setTagsToRead(["picture"]).read({
       onSuccess: ({ tags }) => {
         const pic = tags.picture;
         if (pic) {
@@ -22,7 +22,7 @@ const readCover = (file: File) => {
   });
 };
 
-const Mp3CoverPreview = ({ file }: { file: IFile }) => {
+const Mp3CoverPreview = ({ file }) => {
   const [cover, setCover] = useState<string | null>(null);
 
   useEffect(() => {

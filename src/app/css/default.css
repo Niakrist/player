@@ -38,5 +38,9 @@ ul {
 }
 
 button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: block;
   cursor: pointer;
 }
