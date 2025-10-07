@@ -1,21 +1,12 @@
 import { musicPlayerStore } from "@/app";
 import { TrackInfo } from "@/entities";
-import {
-  Pause,
-  Play,
-  SkipBack,
-  SkipForward,
-  Volume,
-  Volume1,
-  Volume2,
-} from "lucide-react";
+import { Pause, Play, SkipBack, SkipForward, Volume, Volume1, Volume2 } from "lucide-react";
 import styles from "./AudioPlayer.module.css";
 import { ProgressBar } from "@/shared/ui";
 import { useAudioPlayer } from "@/shared/hooks";
 
 const AudioPlayer = () => {
-  const { audioRef, onSeek, changeTrack, togglePlayPause, setVolume } =
-    useAudioPlayer();
+  const { audioRef, onSeek, changeTrack, togglePlayPause, setVolume } = useAudioPlayer();
 
   if (!musicPlayerStore.currentTrack) {
     return null;
@@ -32,7 +23,9 @@ const AudioPlayer = () => {
     <div className={styles.audioPlayer}>
       <TrackInfo
         title={musicPlayerStore.currentTrack.name}
+        images={musicPlayerStore.currentTrack.images}
         subTitle={musicPlayerStore.currentTrack.artist.name}
+        track={musicPlayerStore.currentTrack}
       />
       <audio
         ref={audioRef}
@@ -42,7 +35,8 @@ const AudioPlayer = () => {
 
           musicPlayerStore.seek(currentTime);
         }}
-        onEnded={() => (musicPlayerStore.isPlaying = false)}></audio>
+        onEnded={() => (musicPlayerStore.isPlaying = false)}
+      ></audio>
       <div className={styles.controllWrapper}>
         <div className={styles.wrapperButton}>
           <button onClick={() => changeTrack("prev")}>
@@ -50,7 +44,10 @@ const AudioPlayer = () => {
           </button>
           <button
             className={styles.buttonPlay}
-            onClick={() => togglePlayPause()}>
+            onClick={() =>
+              musicPlayerStore.isPlaying ? togglePlayPause(false) : togglePlayPause(true)
+            }
+          >
             {musicPlayerStore.isPlaying ? (
               <Pause className={styles.play} size={20} />
             ) : (
