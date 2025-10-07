@@ -4,8 +4,8 @@ import { TRACKS } from "../data/track.data";
 
 class MusicPlayerStore {
   isPlaying: boolean = false;
-  currentTrack: ITrack | null = TRACKS[0];
-  volume: number = 85;
+  currentTrack: ITrack | null = null;
+  volume: number = 15;
   curretnTime: number = 0;
   progress: number = 0;
 
@@ -15,10 +15,11 @@ class MusicPlayerStore {
 
   setTrack(track: ITrack | null) {
     this.currentTrack = track;
+    // this.isPlaying = true;
   }
 
-  togglePlayPause() {
-    this.isPlaying = !this.isPlaying;
+  togglePlayPause(value: boolean) {
+    this.isPlaying = value;
   }
 
   seek(time: number) {
@@ -30,9 +31,7 @@ class MusicPlayerStore {
   }
   changeTrack(type: "prev" | "next") {
     if (!this.currentTrack) return;
-    const currentIndex = TRACKS.findIndex(
-      (track) => track.name === this.currentTrack?.name
-    );
+    const currentIndex = TRACKS.findIndex((track) => track.name === this.currentTrack?.name);
 
     const nextIndex =
       type === "next"

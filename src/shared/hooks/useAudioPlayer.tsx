@@ -1,14 +1,22 @@
 import { musicPlayerStore } from "@/app";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export const useAudioPlayer = () => {
   const audioRef = useRef<HTMLAudioElement>(null);
 
-  const togglePlayPause = () => {
+  useEffect(() => {
+    if (!audioRef.current) return;
+    if (musicPlayerStore.isPlaying) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [musicPlayerStore.isPlaying, musicPlayerStore.currentTrack, audioRef.current]);
+
+  const togglePlayPause = (value: boolean) => {
     if (!audioRef.current) return;
 
-    musicPlayerStore.togglePlayPause();
-    console.log("isPlaying: ", musicPlayerStore.isPlaying);
+    musicPlayerStore.togglePlayPause(value);
 
     if (audioRef.current.paused) {
       audioRef.current.play();

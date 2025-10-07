@@ -12,8 +12,10 @@ const TrackItem = ({ track }: ITrackItemProps) => {
   return (
     <div className={styles.track}>
       <TrackInfo
+        track={track}
         title={track.name}
         subTitle={transformDuration(track.durations)}
+        images={track.images}
       />
 
       <div className={styles.buttonWrapper}>
