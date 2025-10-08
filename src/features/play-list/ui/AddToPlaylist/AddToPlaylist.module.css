@@ -1,0 +1,34 @@
+.addToPlaylistWrapper {
+  position: relative;
+}
+
+.wrapperPlaylist {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.item {
+  color: #fff;
+  opacity: 0.65;
+  transition: opacity 0.2s;
+}
+
+.item:hover {
+  opacity: 0.9;
+}
+
+.isAdded {
+  opacity: 1;
+}
+
+.iconEllipsis {
+  color: #fff;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+
+.iconEllipsis:hover {
+  opacity: 1;
+}

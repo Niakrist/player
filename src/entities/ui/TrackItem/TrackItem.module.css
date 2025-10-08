@@ -24,15 +24,6 @@
   fill: red;
 }
 
-.iconEllipsis {
-  color: #fff;
-  opacity: 0.3;
-  transition: opacity 0.2s;
-}
-.iconEllipsis:hover {
-  opacity: 1;
-}
-
 .buttonWrapper {
   display: flex;
   align-items: center;

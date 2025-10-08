@@ -5,6 +5,7 @@ import TrackInfo from "../TrackInfo/TrackInfo";
 import { transformDuration } from "@/shared/utils";
 import cn from "classnames";
 import { favoritesStore } from "@/app/store/favorites-store";
+import { AddToPlaylist } from "@/features";
 interface ITrackItemProps {
   track: ITrack;
 }
@@ -29,9 +30,7 @@ const TrackItem = ({ track }: ITrackItemProps) => {
         <button onClick={() => handleToggleFavorites(track.name)}>
           <Heart className={cn(styles.iconHeart, { [styles.isFavorite]: isFavorite })} />
         </button>
-        <button>
-          <Ellipsis className={styles.iconEllipsis} />
-        </button>
+        <AddToPlaylist track={track} />
       </div>
     </div>
   );

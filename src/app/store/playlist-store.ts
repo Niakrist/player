@@ -1,6 +1,6 @@
 import { makeAutoObservable } from "mobx";
 
-class PlayList {
+class PlaylistStore {
   playList: { name: string; traks: string[] }[] = JSON.parse(
     localStorage.getItem("playlist") || "[]",
   );
@@ -41,6 +41,15 @@ class PlayList {
 
     this.saveToLocalStorage();
   }
+
+  isTrackInPlayList(playList: string, trackName: string) {
+    const currentPlaylist = this.playList.find((item) => item.name === playList);
+
+    if (!currentPlaylist) {
+      return false;
+    }
+    return currentPlaylist.traks.includes(trackName);
+  }
 }
 
-export const playList = new PlayList();
+export const playlistStore = new PlaylistStore();
