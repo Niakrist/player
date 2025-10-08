@@ -5,12 +5,19 @@ import { TRACKS } from "../data/track.data";
 class MusicPlayerStore {
   isPlaying: boolean = false;
   currentTrack: ITrack | null = null;
-  volume: number = 15;
+  volume: number = 85;
   curretnTime: number = 0;
   progress: number = 0;
+  favorites: ITrack[] = [];
 
   constructor() {
     makeAutoObservable(this);
+  }
+
+  toggleFavorites(track: ITrack) {
+    this.favorites = this.favorites.find((favorite) => favorite.name === track.name)
+      ? this.favorites.filter((favorite) => favorite.name !== track.name)
+      : [...this.favorites, track];
   }
 
   setTrack(track: ITrack | null) {
