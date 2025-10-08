@@ -20,6 +20,10 @@
   fill: var(--color-primary);
 }
 
+.isFavorite {
+  fill: red;
+}
+
 .iconEllipsis {
   color: #fff;
   opacity: 0.3;
