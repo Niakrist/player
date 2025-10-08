@@ -2,6 +2,8 @@ import { LIBRARY_MENU_ITEMS, MENU_ITEMS } from "@/app/data/menu.data";
 import { Menu } from "@/entities";
 import styles from "./SideBar.module.css";
 
+import { SidebarPlaylist } from "@/entities/ui";
+
 const SideBar = () => {
   return (
     <aside className={styles.aside}>
@@ -9,7 +11,7 @@ const SideBar = () => {
       <hr className={styles.line} />
       <Menu items={LIBRARY_MENU_ITEMS} title="Your Library" />
       <hr className={styles.line} />
-      <Menu items={LIBRARY_MENU_ITEMS} title="PlayLists" />
+      <SidebarPlaylist />
     </aside>
   );
 };

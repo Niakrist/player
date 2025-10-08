@@ -1,0 +1,40 @@
+.customMenuWrapper {
+  position: relative;
+}
+
+.buttonOpenCustomMenu.buttonOpenCustomMenu {
+  padding: 8px 16px 8px 8px;
+  background-color: var(--color-bg-player);
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.2s;
+  border-radius: 8px;
+}
+
+.buttonOpenCustomMenu:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.textButton {
+  line-height: 1;
+  font-size: 14px;
+}
+
+.inputNamePlaylist {
+  padding: 8px;
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+.buttonAddPlaylist {
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.2s;
+}
+.buttonAddPlaylist:hover {
+  color: rgba(255, 255, 255, 0.9);
+}
